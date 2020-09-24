@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Cookie</title>
+    
+</head>
+<body>
+    <script>
+    localStorage.setItem('Data1', 'Nazarick');
+    localStorage.setItem('Data2', 'Nazarick 2');
+    
+    // let Data1 = localStorage.getItem('Data1');
+    // let Data2 = localStorage.getItem('Data2');
+    let user ={
+        name :"Shalltear",
+        "firstName":"Bloodfallen",
+        age: 25
+    }
+    localStorage.setItem('user',JSON.stringify(user));
+
+    user = localStorage.getItem('user');
+    console.log(JSON.parse(user));
+    // console.log(Data1);
+    // console.log(Data2);
+    </script>
+</body>
+
+</html>

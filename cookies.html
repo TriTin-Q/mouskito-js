@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Cookie</title>
+    
+</head>
+<body>
+    <script>
+        document.cookie='name=Bloodfallen;expires=Fri, 30 Dec 9999 23:59:59 GMT;';
+        document.cookie='firstName=Shalltear;expires=Fri, 30 Dec 9999 23:59:59 GMT;';
+
+        // console.log(document.cookie[0]);
+
+        //TODO récupéré le cookie name
+        // var result="";
+        // var i = 0;
+        // var j = 0;
+        // var test = document.cookie;
+        // while(test[i] !== "="){
+        //     test[i] = test[i++];
+        //     i++;
+        // }
+        // i++;
+        // while(test[i] !==";"){
+        //     result += test[i];
+        //     i++;
+        // }
+        // console.log(result);
+        console.log(document.cookie.split(';'));
+        function getCookie(cname){
+            var name = cname +"=";
+            var cookieArray = document.cookie.split(';');
+            for(i=0;i<cookieArray.length;i++){
+                var c = cookieArray[i];
+                while(c.charAt(0)==' '){
+                    c = c.substring(1);
+                }
+                if(c.indexOf(name)==0){
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        getCookie(document.cookie);
+    </script>
+</body>
+
+</html>
